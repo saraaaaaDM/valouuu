@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+<title>Attrape mon cœur</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Delius&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<!-- Écran d'accueil -->
+<div id="startScreen" class="screen active">
+  <div class="card">
+    <h1>Mission : Attrape mon cœur ❤️</h1>
+    <p>Attrape les cœurs. <br>Évite les obstacles   <img src="obstacle.png" width="auto" height="17"> <br>Tu as 3 vies ! </p>
+    <button onclick="startGame()">Commencer</button>
+  </div>
+</div>
+
+<!-- Écran victoire -->
+<div id="endScreen" class="screen">
+  <div class="card">
+    <img src="final.jpg" class="finalImage"/>
+    <h1>Tu as gagné mon cœur, OUUUUUHHHHHHH</h1>
+    <p id="finalScore"></p>
+    <button onclick="restartGame()">Rejouer</button>
+  </div>
+</div>
+
+<!-- Écran défaite -->
+<div id="loseScreen" class="screen">
+  <div class="card">
+    <h1>HANNNNNN t'es trop nuuul</h1>
+    <p>T'as perdu trou du cuuuulll</p>
+    <button onclick="restartGame()">Réessayer</button>
+  </div>
+</div>
+
+<!-- HUD et panier -->
+<div id="score">Cœurs : 0</div>
+<div id="lives">Vies : ❤️❤️❤️</div>
+<div id="player"></div>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>

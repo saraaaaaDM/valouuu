@@ -1,0 +1,105 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Delius', sans-serif;
+  background-color: #ff9bb3;
+
+}
+/* Animation popup */
+/* Popup card pop effect */
+.screen .card {
+  transform: scale(0.8);
+  opacity: 0;
+  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.5s ease;
+}
+
+.screen.active .card {
+  transform: scale(1);
+  opacity: 1;
+}
+
+
+
+/* Overlay doux */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+  backdrop-filter: blur(4px);
+  z-index: 1;
+}
+
+/* HUD */
+#score, #lives {
+  position: fixed;
+  top: 20px;
+  font-size: 16px;
+  color: white;
+  background: rgba(0,0,0,0.4);
+  padding: 8px 14px;
+  border-radius: 999px;
+  z-index: 5;
+}
+#score { left: 20px; top: 60px; }
+#lives { right: 20px; top: 60px; }
+
+/* Panier */
+#player {
+  position: fixed;
+  bottom: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95px;
+  height: 95px;
+  background: url('panier_vide.png') center/contain no-repeat;
+  z-index: 6;
+}
+
+/* Objets qui tombent */
+.fall {
+  position: fixed;
+  width: 65px;
+  height: 65px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 4;
+}
+
+/* Écrans */
+.screen {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+  padding: 25px;
+}
+.screen.active { display: flex; }
+
+.card {
+  background: rgba(255,255,255,0.92);
+  border-radius: 30px;
+  padding: 35px 25px;
+  max-width: 380px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+}
+
+button {
+  margin-top: 25px;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #ff5c8a, #ff9bb3);
+  color: white;
+}
+
+.finalImage {
+  width: 140px;
+  margin-bottom: 15px;
+}
